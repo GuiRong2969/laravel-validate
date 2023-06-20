@@ -115,12 +115,12 @@ class AddressRequest extends FormRequest
                 'province', 'city', 'county', 'address'
             ],
 
-            // // 地址编辑时，校验以下字段
+            // 地址编辑时，校验以下字段
             'update' => [
                 'id', 'province', 'city', 'county', 'address'
             ],
 
-            // 地址新增时，校验以下字段
+            // 地址删除时，校验以下字段
             'delete' => [
                 'id'
             ],
