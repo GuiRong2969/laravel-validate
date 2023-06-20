@@ -1,0 +1,33 @@
+{
+  "name": "guirong/laravel-validate",
+  "type": "library",
+  "description": "The use of the Larravel validator and validation scenarios",
+  "keywords": [
+    "laravel-validate",
+    "laravel",
+    "validate",
+    "scene"
+  ],
+  "homepage": "https://github.com/GuiRong2969/laravel-validate",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rong Gui",
+      "email": "15168272969@163.com",
+      "homepage": "https://github.com/GuiRong2969/laravel-validate"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Guirong\\Laravel\\Validate\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Guirong\\Laravel\\Validate\\Test\\": "test/"
+    }
+  }
+}
