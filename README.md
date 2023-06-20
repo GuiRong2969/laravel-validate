@@ -198,7 +198,7 @@ class AddressController extends Controller
 }
 ```
 
-控制器`AddressController` 关闭自动校验， `autoValidate` 修改为 false，
+验证器`AddressRequest` 关闭自动校验， `autoValidate` 修改为 false，
 
 > 注意：关闭自动校验后，`新增`中的函数场景自动绑定和 `删除` 中的路由场景绑定将会失效
 
