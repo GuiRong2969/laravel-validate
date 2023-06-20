@@ -42,7 +42,7 @@ php artisan make:request AddressRequest
 
 namespace App\Http\Requests;
 
-use Guirong\LaravelValidate\FormRequest;
+use Guirong\Laravel\Validate\FormRequest;
 
 class AddressRequest extends FormRequest
 {
@@ -205,9 +205,9 @@ class AddressController extends Controller
 ```php
 namespace App\Http\Requests;
 
-use Guirong\LaravelValidate\ApiRequest;
+use Guirong\Laravel\Validate\FormRequest;
 
-class AddressRequest extends ApiRequest
+class AddressRequest extends FormRequest
 {
     /**
      * Auto validation
