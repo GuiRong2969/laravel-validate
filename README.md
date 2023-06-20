@@ -291,7 +291,7 @@ Route::post('/address/del', [\App\Http\Controllers\AddressController::class, 'de
 
 
 ## 结语
-> *本文的事件系统只是一种代码解耦的写法，并非工具性的依赖包，感兴趣的话可以自己任意扩展。*
+> *本文的 `scene` 验证场景只是为了灵活适应业务的写法，laravel内置的 `FormRequest` 表单才是最灵活的写法但容易造成类泛滥，感兴趣的话可以自己任意扩展。*
 
 ## License
 
