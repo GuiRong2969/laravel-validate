@@ -108,12 +108,12 @@ class FormRequest extends HttpFormRequest
      * @param string|array $scene `Scenario name or validation rules`
      * @return void
      */
-    public function validate($scene = '')
+    public function validate($scene = null)
     {
         if (!$this->getAutoValidate()) {
             if (is_array($scene)) {
                 $this->setExtraRule($scene);
-            } else {
+            } else if (is_string($scene)) {
                 $this->setScene($scene);
             }
             $this->handleValidate();
@@ -217,7 +217,7 @@ class FormRequest extends HttpFormRequest
         }
         $scene = $this->container->call([$this, 'scene']);
         if (!array_key_exists($sceneName, $scene)) {
-            if($this->getSceneStrict()){
+            if ($this->getSceneStrict()) {
                 throw new ValidationException("Scene '$sceneName' does not exist");
             }
             return $rule;
