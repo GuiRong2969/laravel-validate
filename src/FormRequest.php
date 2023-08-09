@@ -65,17 +65,16 @@ class FormRequest extends HttpFormRequest
     protected function handleValidate()
     {
         $this->prepareForValidation();
-
         if (!$this->passesAuthorization()) {
             $this->failedAuthorization();
         }
-
         $instance = $this->getValidatorInstance();
-
+        if (method_exists($this, 'addCustomExtensions')) {
+            $this->addCustomExtensions($instance);
+        }
         if ($instance->fails()) {
             $this->failedValidation($instance);
         }
-
         $this->passedValidation();
     }
 
